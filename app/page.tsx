@@ -9,6 +9,7 @@ const Home = () => {
             </div>
             <div className='flex justify-center items-center gap-x-3'>
                 <Link href='/treemap' className='px-4 py-2 text-lg rounded-xl'>TreeMap</Link>
+                <Link href='/graph' className='px-4 py-2 text-lg rounded-xl'>Graph</Link>
             </div>
         </main>
     )
