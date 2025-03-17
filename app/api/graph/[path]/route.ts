@@ -6,7 +6,7 @@ import data3 from '@/public/3.json'
 
 export async function GET(
 	req: NextRequest,
-	{ params }: { params: { path: string } }
+	{ params }: { params: Promise<{ path: string }> }
 ) {
 	const { path } = await params
 
