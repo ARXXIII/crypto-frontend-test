@@ -1,17 +1,9 @@
 import type { Metadata } from "next"
 import { Header } from "@/components/header/header"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Montserrat } from 'next/font/google'
 import "./globals.css"
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
+const montserrat = Montserrat({ subsets: ['latin', 'cyrillic-ext'] })
 
 export const metadata: Metadata = {
     title: "Crypto by ARXXIII",
@@ -25,7 +17,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`} suppressHydrationWarning>
+            <body className={`${montserrat.className} antialiased min-h-screen`} suppressHydrationWarning>
                 <Header />
                 {children}
             </body>
